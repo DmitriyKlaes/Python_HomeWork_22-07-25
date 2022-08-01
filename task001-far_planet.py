@@ -11,3 +11,12 @@ def find_farthest_orbit(coll):
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 print(*find_farthest_orbit(orbits))
+
+# от препода
+
+def find_farthest_orbit(arr):
+    return [i for i in arr if i[0] * i[1] == max([i[0] * i[1] for i in arr if i[0] != i[1]])][0]
+
+
+orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+print(*find_farthest_orbit(orbits))
